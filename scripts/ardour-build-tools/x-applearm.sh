@@ -101,9 +101,6 @@ mkdir -p ${BLDDEP}
 export PATH="${BLDDEP}/bin:$PREFIX/bin:$PATH"
 export ACLOCAL_PATH=$PREFIX/share/aclocal
 
-PYVERS=`python --version 2>&1 | cut -d ' ' -f 2 | cut -b 1-3`
-mkdir -p $BLDDEP/lib/python${PYVERS}/site-packages/
-
 ################################################################################
 # tools to build tools
 
@@ -160,6 +157,12 @@ make install
 
 ################################################################################
 # deps needed to autoreconf gtk+
+
+src Python-2.7.18 tar.xz https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz
+PREFIX="${BLDDEP}" nativebuild --enable-shared
+
+PYVERS=`python --version 2>&1 | cut -d ' ' -f 2 | cut -b 1-3`
+mkdir -p $BLDDEP/lib/python${PYVERS}/site-packages/
 
 src intltool-0.50.2 tar.gz http://launchpad.net/intltool/trunk/0.50.2/+download/intltool-0.50.2.tar.gz
 PREFIX="${BLDDEP}" nativebuild
