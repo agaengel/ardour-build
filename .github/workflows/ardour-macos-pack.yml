@@ -35,10 +35,10 @@ jobs:
           - {
               arch: x86_64
             }
-          # - { 
-          #     # requires macOS 11.0 SDK (or later)
-          #     arch: arm64
-          #   }
+          - { 
+              # requires macOS 11.0 SDK (or later)
+              arch: arm64
+            }
     steps:
       
       # - name: Download CA Certification
