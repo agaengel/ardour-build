@@ -1005,9 +1005,8 @@ done
 # e.g. JUCE option to lazily loading libcurl.so
 (
 cd $APPLIB/
-for lib in *.so.[0-9]* */*.so.[0-9]*; do
-  link=$(echo $lib | sed 's/\.[0-9]*$//')
-  ln -s $lib $link;
+for lib in *.so.[0-9]*; do
+  ln -s $lib `echo $lib | sed 's/\.[0-9]*$//'`
 done
 )
 
