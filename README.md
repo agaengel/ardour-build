@@ -33,11 +33,11 @@ Now pre-built packages are available on:
 | :-------: | :----------------: | :----------------: | :----------------: | ------------------ |
 | GNU/Linux | :heavy_check_mark: |        :x:         | :heavy_check_mark: | :heavy_check_mark: |
 |  Windows  | :heavy_check_mark: | :heavy_check_mark: |        :x:         | :x:                |
-|   macOS   | :heavy_check_mark: |        :x:         |        :x:         | :x:                |
+|   macOS   | :heavy_check_mark: |        :x:         |       :heavy_check_mark:         | :x:                |
 
-**NOTES:**
+**Note**
 
-- In the future, support for macOS arm64 may be added.
+- Build them without `--freebie`. Namely, there will be no periodic silence after 10 minutes (Non-demo version).
 
 ## Build
 
