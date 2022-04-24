@@ -18,7 +18,7 @@ on:
     types: ardour-macos-pack
 
 env:
-  ARDOUR_VERSION: "7.0-pre0"
+  ARDOUR_VERSION: "6.9"
   # available upload services: wetransfer.com, file.io, 0x0.st
   UPLOAD_SERVICE: wetransfer.com
   # https://community.ardour.org/srctar
