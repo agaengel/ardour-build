@@ -18,7 +18,7 @@ on:
     types: ardour-macos-pack
 
 env:
-  ARDOUR_VERSION: "6.9"
+  ARDOUR_VERSION: "latest"
   # available upload services: wetransfer.com, file.io, 0x0.st
   UPLOAD_SERVICE: wetransfer.com
   # https://community.ardour.org/srctar
@@ -72,12 +72,20 @@ jobs:
           ref: dev
           path: '.'
 
-      - name: Get Ardour Latest Release Source Code
+      # - name: Get Ardour Latest Release Source Code
+      #   uses: actions/checkout@v3
+      #   with:
+      #     repository: 'Ardour/ardour'
+      #     fetch-depth: 1
+      #     ref: ${{ env.ARDOUR_VERSION }}
+      #     path: './src'
+
+      - name: Get Ardour Latest Source Code
         uses: actions/checkout@v3
         with:
           repository: 'Ardour/ardour'
           fetch-depth: 1
-          ref: ${{ env.ARDOUR_VERSION }}
+          ref: 'master'
           path: './src'
         
       - name: Print Clang & Perl Version
