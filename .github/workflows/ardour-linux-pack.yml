@@ -3,13 +3,13 @@ name: Ardour Packaging for Linux
 on:
   push:
     branches: 
-      - dev
+      - testing
     paths-ignore:
       - 'README.md'
       - 'LICENSE'
   pull_request:
     branches: 
-      - dev
+      - testing
     paths-ignore:
       - 'README.md'
       - 'LICENSE'

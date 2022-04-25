@@ -3,13 +3,13 @@ name: Ardour Packaging for MacOS
 on:
   push:
     branches: 
-      - dev
+      - testing
     paths-ignore:
       - 'README.md'
       - 'LICENSE'
   pull_request:
     branches: 
-      - dev
+      - testing
     paths-ignore:
       - 'README.md'
       - 'LICENSE'
@@ -18,7 +18,7 @@ on:
     types: ardour-macos-pack
 
 env:
-  ARDOUR_VERSION: "6.9"
+  ARDOUR_VERSION: "7.0-pre0"
   # available upload services: wetransfer.com, file.io, 0x0.st
   UPLOAD_SERVICE: wetransfer.com
   # https://community.ardour.org/srctar
